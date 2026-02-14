@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "mentor1",
+      "description": "Portrait of Rahul",
+      "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA5NjUwNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "mentor2",
+      "description": "Portrait of Anjali",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDk4MzY0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "mentor3",
+      "description": "Portrait of Arjun",
+      "imageUrl": "https://images.unsplash.com/photo-1637855190155-d0d9a37f1e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBkZXZlbG9wZXJ8ZW58MHx8fHwxNzcxMDE0NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man developer"
+    },
+    {
+      "id": "mentor4",
+      "description": "Portrait of Priya",
+      "imageUrl": "https://images.unsplash.com/photo-1490818387583-1baba5e638af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMGNvb2tpbmd8ZW58MHx8fHwxNzcxMDk1MzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman cooking"
+    },
+    {
+      "id": "mentor5",
+      "description": "Portrait of Vikram",
+      "imageUrl": "https://images.unsplash.com/photo-1591291621216-a3b63442b311?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjB5b2dhfGVufDB8fHx8MTc3MTA5NTQyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man yoga"
+    },
+    {
+      "id": "mentor6",
+      "description": "Portrait of Sameer",
+      "imageUrl": "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwdWJsaWMlMjBzcGVha2luZ3xlbnwwfHx8fDE3NzEwOTU0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man speaking"
+    },
+    {
+      "id": "user-avatar",
+      "description": "Portrait of Karthika",
+      "imageUrl": "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDk2NTAwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    }
+  ]
+}
