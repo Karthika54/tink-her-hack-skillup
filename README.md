@@ -2,27 +2,34 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [Skill-Up] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [She_code]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Mrudhula Mohan] - [NSS COLLEGE OF ENGINEERING]
+- Member 2: [Karthika C] - [NSS COLLEGE OF ENGINEERING]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[SkillLink is a smart, student-friendly platform where people can exchange skills instead of money. It connects learners locally, helps schedule sessions, and gamifies learning with SkillCoins and community leaderboards.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Many people have valuable skills — coding, design, cooking, photography, writing — but:
+They can’t afford professional courses.
+They struggle to find someone nearby who can teach or learn in return.
+There’s no trusted platform for fair, local skill exchange.
+So, SkillLink bridges this gap by connecting people who want to learn a skill with those who can teach it.]
 
 ### The Solution
-[How are you solving it?]
+[A community-driven app that allows users to:
+Offer their own skills (“I can teach Python”)
+Search for others’ skills (“Looking to learn guitar”)
+Exchange time/skills instead of money — a “teach one, learn one” model.]
 
 ---
 
@@ -31,10 +38,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [JavaScript,TypeScript]
+- Frameworks used: [React (client), Node.js + Express]
+- Libraries used: [firebase (Auth + Firestore), cors, body-parser, axios (or fetch), and optionally dotenv / joi for config & validation]
+- Tools used: [ VS Code, Git,Browser]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,7 +53,7 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
+- Feature 1: []
 - Feature 2: [Description]
 - Feature 3: [Description]
 - Feature 4: [Description]
@@ -59,12 +66,16 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[Copy code
+# frontend (Vite + React)
+cd web
+npm create vite@latest . -- --template react
+npm install]
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[Run commands -  npm start, python app.py]
 ```
 
 ### For Hardware:
@@ -96,7 +107,7 @@ List the key features of your project:
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram]()
 *Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
