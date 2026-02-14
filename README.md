@@ -2,7 +2,7 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Skill-Up] 🎯
+# [Skill-Link] 🎯
 
 ## Basic Details
 
