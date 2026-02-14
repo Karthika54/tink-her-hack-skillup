@@ -13,7 +13,7 @@
 - Member 2: [Karthika C] - [NSS COLLEGE OF ENGINEERING]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://tink-her-hack-skillup.vercel.app/]
 
 ### Project Description
 [SkillLink is a smart, student-friendly platform where people can exchange skills instead of money. It connects learners locally, helps schedule sessions, and gamifies learning with SkillCoins and community leaderboards.]
@@ -53,10 +53,10 @@ Exchange time/skills instead of money — a “teach one, learn one” model.]
 ## Features
 
 List the key features of your project:
-- Feature 1: []
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Skill Management System]
+- Feature 2: [Public Skill Directory]
+- Feature 3: [Contact and Collaboration]
+- Feature 4: [Real time update and scalability]
 
 ---
 
