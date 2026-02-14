@@ -94,26 +94,82 @@ npm install]
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1](<img width="1920" height="1080" alt="landing page png" src="https://github.com/user-attachments/assets/b8500f95-4de7-491a-8994-8dc4bfef0775" />
+)
+Landing page of web app
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](<img width="1920" height="1080" alt="dashboard png" src="https://github.com/user-attachments/assets/1e2e7926-3516-423d-914c-c164c09c18d0" />
+)
+Dashboard
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](<img width="1920" height="1080" alt="profile png" src="https://github.com/user-attachments/assets/74df915b-c010-43e5-8346-91df299900a5" />
+)
+profile page
+
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram]()
-*Explain your system architecture - components, data flow, tech stack interaction*
+![Architecture Diagram]
+([Browser / Mobile Client (React + Vite)]
+          |
+          | 1. Authentication (Firebase client SDK)
+          |    - signUp / signIn -> receives ID token
+          |
+          v
+[Firebase Auth]  ←───────────────────────────────────────────────┐
+  (user identity)                                              |
+          |                                                     |
+          | 2. Firestore reads (public) / writes (auth required) |
+          v                                                     |
+[Cloud Firestore]  (skills collection)                          |
+  - skills/{id}                                                 |
+  - users/{uid}                                                 |
+          |                                                     |
+          |                                                     |
+          |   Optional: server-side operations                   |
+          |                                                     |
+          v                                                     |
+[Cloud Functions / Express API (Firebase Admin SDK or self-hosted)]
+  - verify ID token (admin.auth().verifyIdToken)
+  - create skill (server-side validation, add ownerEmail)
+  - send email via SendGrid (optional)                         |
+          |                                                     |
+          v                                                     |
+[SendGrid / Email Service]  (optional outbound emails)         |)
+
+*Tech stack interaction matrix (who talks to whom)
+Frontend (React + Vite)
+→ Firebase Auth (client SDK) for sign-in/sign-up.
+→ Cloud Firestore (client SDK) for reads and optionally writes.
+→ Cloud Functions / Express API (HTTP) for secure server-side actions (POST /contact, POST /createSkill) — include Authorization: Bearer <ID token> header.
+Cloud Functions / Express API
+← verifies token with Firebase Admin SDK.
+←/→ Cloud Firestore (admin writes/reads).
+→ SendGrid (or SMTP) to send outbound email notifications or contact messages.
+Firestore Security Rules
+Enforce read/write constraints at DB level. Even if an attacker talks directly to Firestore, rules prevent unauthorized writes/edits.
+Security & validation (recommended)
+Firestore rules: only authenticated users can create; only owners can update/delete.
+Server-side verification: any API endpoints must verify the Firebase ID token using Admin SDK.
+Do server-side validation of field lengths, types, and tags (to prevent malicious content).
+Rate-limit contact emails via server and optionally use reCAPTCHA on the client.
+Scaling & operational notes
+Firestore handles horizontal scaling and realtime listeners; minimal ops for basic MVP.
+If you add heavy processing (image transforms, payments), route through Cloud Functions or a dedicated backend.
+Use environment secrets for SendGrid API keys (Functions config or server env vars).
+Use Firebase Emulator Suite for local dev/testing (Auth + Firestore + Functions).
+Extension points (next steps when you grow)
+Add image uploads → Firebase Storage + signed URLs.
+Add in-app messaging → messages collection with security rules and throttling.
+Add booking/payments → integrate Stripe via server-side endpoints.
+Add search & filters → Firestore composite indexes or Algolia for full-text search.*
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+![Workflow](https://drive.google.com/file/d/1jel9CsAstoG6lmU67qJA1bDeCwSnIYx-/view?usp=sharing)
+*Working of skill-up app*
 
 ---
 
@@ -190,8 +246,8 @@ npm install]
 
 #### App Flow Diagram
 
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
+![App Flow](https://docs.google.com/document/d/1VZZ-yfYHqf-EkRnQ76CTbs-Xm1lM7fi5j1VDmmCBKyE/edit?usp=sharing)
+*App flow diagram *
 
 #### Installation Guide
 
@@ -372,9 +428,8 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
-
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+[https://drive.google.com/file/d/1hpFOfGzHtlSJYqh3nfw4tYQ976jgEaa0/view?usp=sharing]
+*this demo shows the working of the app*
 
 ### Additional Demos
 [Add any extra demo materials/links - Live site, APK download, online demo, etc.]
@@ -385,35 +440,32 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+*Tool Used:* [ v0.dev, Cursor, ChatGPT,Gemini,antigravity]
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+*Purpose:* [What you used it for]
+- "cursor for basic app modelling"
+- "chatgpt and gemini for error detection and syntax error correction"
+- "antigravity for adding additional features"
 
-**Key Prompts Used:**
+*Key Prompts Used:*
 - "Create a REST API endpoint for user authentication"
 - "Debug this async function that's causing race conditions"
 - "Optimize this database query for better performance"
 
-**Percentage of AI-generated code:** [Approximately X%]
+*Percentage of AI-generated code:* [approximately 55%]
 
-**Human Contributions:**
+*Human Contributions:*
+-idea,problem statement and solution 
 - Architecture design and planning
 - Custom business logic implementation
 - Integration and testing
-- UI/UX design decisions
-
 *Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
 
 ---
 
 ## Team Contributions
-
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [Mrudhula Mohan]: [Specific contributions - testing and documentation]
+- [Karthika C]: [Specific contributions - Database design,deployment]
 
 ---
 
