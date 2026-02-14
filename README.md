@@ -56,7 +56,7 @@ List the key features of your project:
 - Feature 1: [Skill Management System]
 - Feature 2: [Public Skill Directory]
 - Feature 3: [Contact and Collaboration]
-- Feature 4: [Real time update and scalability]
+- Feature 4: [Real time update and scalabilities]
 
 ---
 
